@@ -1,38 +1,97 @@
-.App {
+.wrapper {
+  background-image: url("./Assets/Prof\ trans.png");
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+
+  padding-bottom: 30px;
+}
+.wrapper:before {
+  background-color: rgba(0, 0, 0, 0.8);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  padding-bottom: 30px;
+}
+.first-section {
+  position: relative;
+}
+.social-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+.social-div a {
+  font-size: 30px;
+}
+.purple {
+  color: #6d2de7;
+}
+.green {
+  color: #55c2ca;
+}
+.first-section,
+.second-section {
+  width: 100%;
+  height: max(100vh, 800px);
+}
+.first-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+.second-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20px;
+}
+.second-section h1 {
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 1241px) {
+  .second-section h1 {
+    font-size: 50px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 783px) {
+  .second-section h1 {
+    font-size: 35px;
   }
-  to {
-    transform: rotate(360deg);
+  .second-section {
+    height: auto;
+    padding: 50px 0px;
+  }
+  .wrapper {
+    background-position: -100%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .second-section h1 {
+    font-size: 27px;
+  }
+  .first-section img {
+    margin-left: -15px;
+  }
+}
+@media screen and (max-width: 435px) {
+  .second-section h1 {
+    font-size: 22px;
   }
 }
