@@ -8,6 +8,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import footGif from "./Assets/foot.gif";
 function App() {
   return (
     <div className="App">
@@ -122,6 +123,25 @@ function App() {
           improving customer and retention, through the point of sale process
         </h2>
       </div>
+      <footer>
+        <h3>Get in Touch</h3>
+        <img src={footGif} alt="" />
+        <p>Follow us on social media</p>
+        <div className="foot-social">
+          <a href="#">
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
