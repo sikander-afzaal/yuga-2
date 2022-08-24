@@ -1,6 +1,7 @@
 .wrapper {
   background-image: url("./Assets/Prof\ trans.png");
   background-size: cover;
+  background-position: top;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -8,7 +9,6 @@
   flex-direction: column;
   position: relative;
   isolation: isolate;
-
   padding-bottom: 30px;
 }
 .wrapper:before,
