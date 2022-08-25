@@ -70,7 +70,7 @@ function App() {
         </div>
       </div>
       <div className="third-section">
-        <Fade top cascade duration={2000}>
+        <Zoom top cascade duration={2000}>
           <h2>in the deepest corner of the “Labz”</h2>
           <h2>lye,, our team of degen geniuses</h2>
           <h2>Made up of developers , innovators </h2>
@@ -81,7 +81,7 @@ function App() {
             shit goes
           </h2>
           <h2>Needless to say,,, we’re still going,,</h2>
-        </Fade>
+        </Zoom>
       </div>
       <div className="fourth-section">
         <Zoom top cascade duration={2000}>
@@ -90,7 +90,7 @@ function App() {
         </Zoom>
 
         <div className="text">
-          <Fade top cascade duration={2000}>
+          <Zoom top cascade duration={2000}>
             <h2>
               Logo Creation a bespoke created logo, hand drawn , original art
               Sales website, roadmap + more Story, themed background to match
@@ -120,21 +120,23 @@ function App() {
               make it fancy , all created and passwords and names as close as
               poss to the project name
             </h2>
-          </Fade>
+          </Zoom>
         </div>
       </div>
       <div className="fifth-section">
-        <Fade top cascade duration={2000}>
+        <Zoom top cascade duration={2000}>
           <h2>web2 to 3 solutions</h2>
           <h2>
             100% web3 future proof websites using software suites such as react
             js, vue js node js and more bringing the ultimate in web3 user
             experience and a level of professionalism to your project…
           </h2>
-          <h2>
-            <span className="purple">NO</span> Wordpress,,,
-            <span className="purple">NO</span> webflow,,,
-            <span className="purple">NO</span> compromises
+          <h2 style={{ display: "flex" }}>
+            <Zoom top cascade duration={2000}>
+              <span className="purple">NO</span> Wordpress,,,
+              <span className="purple">NO</span> webflow,,,
+              <span className="purple">NO</span> compromises
+            </Zoom>
           </h2>
           <h2>Full stack in house specialist team</h2>
           <h2>Technical custom smart contract creation</h2>
@@ -159,7 +161,7 @@ function App() {
             to purchase easily for the non crypto savvy clients, drastically
             improving customer and retention, through the point of sale process
           </h2>
-        </Fade>
+        </Zoom>
       </div>
       <footer>
         <Fade>
