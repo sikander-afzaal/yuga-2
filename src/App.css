@@ -58,6 +58,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding-inline: 20px;
 }
 .second-section h1 {
@@ -101,7 +102,8 @@
   height: auto;
   padding: 80px 20px;
 }
-.fourth-section h2 {
+.fourth-section h2,
+.fifth-section h2 {
   max-width: 1400px;
 }
 .third-section h2,
