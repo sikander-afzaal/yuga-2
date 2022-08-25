@@ -67,6 +67,11 @@
   font-weight: bold;
   line-height: 1.5;
   text-align: center;
+  transform-origin: center center -2em;
+  transform: perspective(1000px) rotateX(-40deg) rotateY(13deg) rotateZ(13deg)
+    translateY(1.3em);
+  opacity: 0;
+  transform-style: preserve-3d;
 }
 .third-section {
   background-image: url("./Assets/fire.gif");

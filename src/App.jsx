@@ -11,7 +11,34 @@ import {
 import footGif from "./Assets/foot.gif";
 import Fade from "react-reveal/Fade";
 import { Zoom } from "react-reveal";
+import { useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import { Sine } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 function App() {
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const section1Timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: document.querySelector(".second-section"),
+        start: "top 20%",
+      },
+    });
+
+    section1Timeline.to(document.querySelectorAll(".second-section h1"), {
+      opacity: 1,
+      y: 0,
+      rotateX: 0,
+      rotateY: 0,
+      rotateZ: 0,
+      duration: 1.2,
+      stagger: 0.2,
+      x: 0,
+      z: 0,
+      ease: Sine.easeOut,
+    });
+  }, []);
   return (
     <div className="App">
       <div className="wrapper">
@@ -33,15 +60,13 @@ function App() {
           <img src={gif} alt="gif" />
         </div>
         <div className="second-section">
-          <Fade top cascade duration={2000}>
-            <h1>WE DELIVER SOLUTIONS</h1>
-            <h1>INCLUDING SEAMLESS</h1>
-            <h1>INTERGRATION OF THE</h1>
-            <h1>BEST FEATURES FROM</h1>
-            <h1>WEB 2 & WEB 3 MERGED INTO</h1>
-            <h1>PROJECT DESIGN & BUILD</h1>
-            <h1>INNOVATIONS</h1>
-          </Fade>
+          <h1>WE DELIVER SOLUTIONS</h1>
+          <h1>INCLUDING SEAMLESS</h1>
+          <h1>INTERGRATION OF THE</h1>
+          <h1>BEST FEATURES FROM</h1>
+          <h1>WEB 2 & WEB 3 MERGED INTO</h1>
+          <h1>PROJECT DESIGN & BUILD</h1>
+          <h1>INNOVATIONS</h1>
         </div>
       </div>
       <div className="third-section">
