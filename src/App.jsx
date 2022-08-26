@@ -136,8 +136,8 @@ function App() {
       <div className="wrapper-fourth">
         <div className="fourth-section">
           <Zoom top cascade duration={2000}>
-            <h2>NFT PROJECTS</h2>
-            <h2>Project Features</h2>
+            <h1>NFT PROJECTS</h1>
+            <h1>Project Features</h1>
           </Zoom>
 
           <div className="text">
@@ -174,7 +174,7 @@ function App() {
         </div>
       </div>
       <div className="fifth-section">
-        <h2>web2 to 3 solutions</h2>
+        <h1>web2 to 3 solutions</h1>
         <h2>
           100% web3 future proof websites using software suites such as react
           js, vue js node js and more bringing the ultimate in web3 user
