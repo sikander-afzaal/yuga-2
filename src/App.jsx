@@ -1,5 +1,4 @@
 import "./App.css";
-import professor from "./Assets/Prof trans.png";
 import gif from "./Assets/gif2.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,14 +14,31 @@ import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 function App() {
+  const { text: text1 } = useTypewriter({
+    words: ["“Labz”"],
+    loop: 0,
+    typeSpeed: 120,
+  });
+  const { text: text2 } = useTypewriter({
+    words: ["innovators"],
+    loop: 0,
+    typeSpeed: 120,
+  });
+  const { text: text3 } = useTypewriter({
+    words: ["RED"],
+    loop: 0,
+    typeSpeed: 120,
+  });
+
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const section1Timeline = gsap.timeline({
       scrollTrigger: {
         trigger: document.querySelector(".second-section"),
-        start: "top 20%",
+        start: "top 40%",
       },
     });
 
@@ -37,6 +53,30 @@ function App() {
       x: 0,
       z: 0,
       ease: Sine.easeOut,
+    });
+    const section4Timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: document.querySelector(".fourth-section"),
+        start: "top 40%",
+      },
+    });
+    section4Timeline.to(document.querySelectorAll(".fourth-section h2"), {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      stagger: 0.4,
+    });
+    const section5Timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: document.querySelector(".fifth-section"),
+        start: "top 40%",
+      },
+    });
+    section5Timeline.to(document.querySelectorAll(".fifth-section h2"), {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      stagger: 0.4,
     });
   }, []);
   return (
@@ -69,28 +109,38 @@ function App() {
           <h1>INNOVATIONS</h1>
         </div>
       </div>
-      <div className="third-section">
-        <Zoom top cascade duration={2000}>
-          <h2>in the deepest corner of the “Labz”</h2>
-          <h2>lye,, our team of degen geniuses</h2>
-          <h2>Made up of developers , innovators </h2>
+      <div className="wrapper-third">
+        <div className="third-section">
+          <Zoom>
+            {" "}
+            <h1 style={{ alignSelf: "center" }}>About Us</h1>
+          </Zoom>
+          <h2>
+            in the deepest corner of the {text1} <Cursor />
+          </h2>
+          <h2>lye,, our team of degen</h2>
+          <h2>
+            Made up of developers , {text2} <Cursor />
+          </h2>
           <h2>All with one thing in common,</h2>
-          <h2>We all chose the RED pill,</h2>
+          <h2>
+            We all chose the {text3} <Cursor /> pill,
+          </h2>
           <h2>
             And followed web3 Down the rabbit hole to see exactly how far this
             shit goes
           </h2>
           <h2>Needless to say,,, we’re still going,,</h2>
-        </Zoom>
+        </div>
       </div>
-      <div className="fourth-section">
-        <Zoom top cascade duration={2000}>
-          <h2>NFT PROJECTS</h2>
-          <h2>Project Features</h2>
-        </Zoom>
-
-        <div className="text">
+      <div className="wrapper-fourth">
+        <div className="fourth-section">
           <Zoom top cascade duration={2000}>
+            <h2>NFT PROJECTS</h2>
+            <h2>Project Features</h2>
+          </Zoom>
+
+          <div className="text">
             <h2>
               Logo Creation a bespoke created logo, hand drawn , original art
               Sales website, roadmap + more Story, themed background to match
@@ -120,48 +170,44 @@ function App() {
               make it fancy , all created and passwords and names as close as
               poss to the project name
             </h2>
-          </Zoom>
+          </div>
         </div>
       </div>
       <div className="fifth-section">
-        <Zoom top cascade duration={2000}>
-          <h2>web2 to 3 solutions</h2>
-          <h2>
-            100% web3 future proof websites using software suites such as react
-            js, vue js node js and more bringing the ultimate in web3 user
-            experience and a level of professionalism to your project…
-          </h2>
-          <h2 style={{ display: "flex" }}>
-            <Zoom top cascade duration={2000}>
-              <span className="purple">NO</span> Wordpress,,,
-              <span className="purple">NO</span> webflow,,,
-              <span className="purple">NO</span> compromises
-            </Zoom>
-          </h2>
-          <h2>Full stack in house specialist team</h2>
-          <h2>Technical custom smart contract creation</h2>
-          <h2>Decentralised exchanges</h2>
-          <h2>
-            web2 + web3 custom dex/cex blend and payment email backend
-            intergration
-          </h2>
-          <h2>Full ecosystem creation</h2>
-          <h2>Complete battle testing on project builds</h2>
-          <h2>Currently taking orders for layer 1 blockchain builds</h2>
-          <h2>
-            Let us bring your business up to date by implementing new innovative
-            services
-          </h2>
-          <h2>
-            Secure web3 ,token/nft wallet creation solution using just your
-            email address
-          </h2>
-          <h2>
-            Fiat currency debit/credit card ramp solutions allows ease of access
-            to purchase easily for the non crypto savvy clients, drastically
-            improving customer and retention, through the point of sale process
-          </h2>
-        </Zoom>
+        <h2>web2 to 3 solutions</h2>
+        <h2>
+          100% web3 future proof websites using software suites such as react
+          js, vue js node js and more bringing the ultimate in web3 user
+          experience and a level of professionalism to your project…
+        </h2>
+        <h2>
+          <span className="purple">NO </span> Wordpress,,,
+          <span className="purple">NO </span> webflow,,,
+          <span className="purple">NO </span> compromises
+        </h2>
+        <h2>Full stack in house specialist team</h2>
+        <h2>Technical custom smart contract creation</h2>
+        <h2>Decentralised exchanges</h2>
+        <h2>
+          web2 + web3 custom dex/cex blend and payment email backend
+          intergration
+        </h2>
+        <h2>Full ecosystem creation</h2>
+        <h2>Complete battle testing on project builds</h2>
+        <h2>Currently taking orders for layer 1 blockchain builds</h2>
+        <h2>
+          Let us bring your business up to date by implementing new innovative
+          services
+        </h2>
+        <h2>
+          Secure web3 ,token/nft wallet creation solution using just your email
+          address
+        </h2>
+        <h2>
+          Fiat currency debit/credit card ramp solutions allows ease of access
+          to purchase easily for the non crypto savvy clients, drastically
+          improving customer and retention, through the point of sale process
+        </h2>
       </div>
       <footer>
         <Fade>

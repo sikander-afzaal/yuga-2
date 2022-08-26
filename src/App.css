@@ -12,8 +12,8 @@
   padding-bottom: 30px;
 }
 .wrapper:before,
-.third-section::before,
-.fourth-section::before {
+.wrapper-third::before,
+.wrapper-fourth::before {
   background-color: rgba(0, 0, 0, 0.8);
   content: "";
   width: 100%;
@@ -21,6 +21,8 @@
   position: absolute;
   z-index: -1;
   padding-bottom: 30px;
+  left: 0;
+  top: 0;
 }
 .first-section {
   position: relative;
@@ -73,30 +75,50 @@
   opacity: 0;
   transform-style: preserve-3d;
 }
-.third-section {
-  background-image: url("./Assets/fire.gif");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  isolation: isolate;
-}
+
 .third-section,
 .fourth-section,
 .fifth-section {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 45px;
   text-align: center;
   height: max(110vh, 900px);
   padding-inline: 20px;
 }
-.fourth-section {
-  background-image: url("./Assets/bg-2.jpeg");
+.wrapper-third,
+.wrapper-fourth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-size: cover;
+  background-position: center;
   position: relative;
   isolation: isolate;
+}
+.wrapper-third {
+  background-image: url("./Assets/fire.gif");
+}
+.wrapper-fourth {
+  background-image: url("./Assets/bg-2.jpeg");
+}
+.third-section {
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1400px;
+}
+.fourth-section {
+  width: 100%;
+  max-width: 1400px;
+}
+.third-section h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+  color: white;
 }
 .fourth-section,
 .fifth-section {
@@ -106,6 +128,8 @@
 .fifth-section {
   height: auto;
   padding: 80px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .fourth-section h2,
 .fifth-section h2 {
@@ -116,11 +140,21 @@
 .fifth-section h2 {
   color: white;
   font-size: 40px;
+  text-align: left;
+}
+
+.fourth-section h2 {
+  opacity: 0;
+  transform: translate(-20px, -50px);
+}
+.fifth-section h2 {
+  opacity: 0;
+  transform: translate(20px, -50px);
 }
 .text {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   margin-top: 30px;
   gap: 20px;
@@ -153,6 +187,7 @@ footer p {
   font-size: 30px;
   color: #bbed2f;
 }
+
 @media screen and (max-width: 1241px) {
   .second-section h1 {
     font-size: 50px;
