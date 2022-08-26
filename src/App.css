@@ -94,7 +94,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  height: auto;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -105,8 +105,8 @@
 }
 .wrapper-fourth {
   background-image: url("./Assets/bg-2.jpeg");
-  padding: 60px 20px;
 }
+
 .third-section {
   align-items: flex-start;
   width: 100%;
@@ -115,6 +115,8 @@
 .fourth-section {
   width: 100%;
   max-width: 1400px;
+  padding: 60px 20px;
+  height: auto;
 }
 .third-section h1,
 .fourth-section h1,
@@ -124,7 +126,6 @@
   color: white;
   align-self: center;
 }
-.fourth-section,
 .fifth-section {
   margin: 0 auto;
   height: 1400px;
