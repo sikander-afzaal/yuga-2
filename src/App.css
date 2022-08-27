@@ -60,12 +60,7 @@
 .social-div a {
   font-size: 30px;
 }
-.purple {
-  color: #6d2de7;
-}
-.green {
-  color: #55c2ca;
-}
+
 .first-section {
   width: 100%;
   height: max(100vh, 800px);
@@ -159,6 +154,7 @@
   padding: 80px 20px;
   max-width: 1400px;
   margin: 0 auto;
+  gap: 70px;
 }
 .fourth-section h2,
 .fifth-section h2 {
@@ -186,7 +182,7 @@
   align-items: flex-start;
   flex-direction: column;
   margin-top: 30px;
-  gap: 20px;
+  gap: 70px;
 }
 footer {
   display: flex;
@@ -222,8 +218,14 @@ footer p {
 .fourth-section h1 {
   color: #55c2ca;
 }
-.fifth-section h1 {
-  color: #bbed2f;
+
+.bars {
+  display: none;
+  font-size: 25px;
+  color: white;
+  position: fixed;
+  top: 30px;
+  right: 30px;
 }
 @media screen and (max-width: 1600px) {
   .second-section h1 {
@@ -295,8 +297,27 @@ footer p {
     height: 800px;
     padding: 80px 20px;
   }
-  .nav-link {
-    display: none;
+  .bars {
+    display: block;
+  }
+  .wrapperNav {
+    left: initial;
+    right: -600px;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  .navbar {
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    flex-direction: column;
+  }
+  .open {
+    right: 0;
   }
 }
 @media screen and (max-width: 560px) {
@@ -320,4 +341,10 @@ footer p {
   .fifth-section h1 {
     font-size: 25px;
   }
+}
+.purple {
+  color: #6d2de7 !important;
+}
+.green {
+  color: #55c2ca !important;
 }

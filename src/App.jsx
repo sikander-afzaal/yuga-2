@@ -10,12 +10,14 @@ import {
 import footGif from "./Assets/foot.gif";
 import Fade from "react-reveal/Fade";
 import { Zoom } from "react-reveal";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 function App() {
+  const [open, setOpen] = useState(false);
   const { text: text1 } = useTypewriter({
     words: ["“Labz”"],
     loop: 0,
@@ -82,18 +84,18 @@ function App() {
   return (
     <div className="App">
       {" "}
-      <div className="wrapperNav">
-        <div className="navbar">
-          <a href="#home" className="nav-link">
+      <div className={`wrapperNav ${open ? "open" : ""}`}>
+        <div className={`navbar ${open ? "open" : ""}`}>
+          <a onClick={() => setOpen(false)} href="#home" className="nav-link">
             Home
           </a>
-          <a href="#about" className="nav-link">
+          <a onClick={() => setOpen(false)} href="#about" className="nav-link">
             About Us
           </a>
-          <a href="#proj" className="nav-link">
+          <a onClick={() => setOpen(false)} href="#proj" className="nav-link">
             Projects
           </a>
-          <a href="#sol" className="nav-link">
+          <a onClick={() => setOpen(false)} href="#sol" className="nav-link">
             Solutions
           </a>
           <div className="social-div">
@@ -111,6 +113,11 @@ function App() {
             </a>
           </div>
         </div>
+        <FontAwesomeIcon
+          onClick={() => setOpen((prev) => !prev)}
+          icon={open ? faXmark : faBars}
+          className="bars"
+        />
       </div>
       <div className="wrapper">
         <div id="home" className="first-section">
@@ -135,13 +142,13 @@ function App() {
           <h2>
             in the deepest corner of the {text1} <Cursor />
           </h2>
-          <h2>lye,, our team of degen</h2>
+          <h2>lye,, our team of degen geniuses</h2>
           <h2>
             Made up of developers , {text2} <Cursor />
           </h2>
           <h2>All with one thing in common,</h2>
           <h2>
-            We all chose the RED {text3} <Cursor />,
+            We all chose to take the RED {text3} <Cursor />,
           </h2>
           <h2>
             And followed web3 Down the rabbit hole to see exactly how far this
@@ -154,7 +161,7 @@ function App() {
         <div className="fourth-section">
           <Zoom top cascade duration={2000}>
             <h1>NFT PROJECTS</h1>
-            <h1>Project Features</h1>
+            <h1 className="purple">Project Features</h1>
           </Zoom>
 
           <div className="text">
@@ -191,7 +198,7 @@ function App() {
         </div>
       </div>
       <div id="sol" className="fifth-section">
-        <h1>web2 to 3 solutions</h1>
+        <h1 className="purple">web2 to 3 solutions</h1>
         <h2>
           100% web3 future proof websites using software suites such as react
           js, vue js node js and more bringing the ultimate in web3 user
