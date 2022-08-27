@@ -27,7 +27,7 @@ function App() {
     typeSpeed: 120,
   });
   const { text: text3 } = useTypewriter({
-    words: ["RED"],
+    words: ["pill"],
     loop: 0,
     typeSpeed: 120,
   });
@@ -81,8 +81,21 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <div className="wrapper">
-        <div className="first-section">
+      {" "}
+      <div className="wrapperNav">
+        <div className="navbar">
+          <a href="#home" className="nav-link">
+            Home
+          </a>
+          <a href="#about" className="nav-link">
+            About Us
+          </a>
+          <a href="#proj" className="nav-link">
+            Projects
+          </a>
+          <a href="#sol" className="nav-link">
+            Solutions
+          </a>
           <div className="social-div">
             <a href="#" className="purple">
               <FontAwesomeIcon icon={faFacebook} />
@@ -97,10 +110,14 @@ function App() {
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>
+        </div>
+      </div>
+      <div className="wrapper">
+        <div id="home" className="first-section">
           <img src={gif} alt="gif" />
         </div>
         <div className="second-section">
-          <h1>WE DELIVER SOLUTIONS</h1>
+          <h1>WE DELIVER BLOCKCHAIN SOLUTIONS</h1>
           <h1>INCLUDING SEAMLESS</h1>
           <h1>INTERGRATION OF THE</h1>
           <h1>BEST FEATURES FROM</h1>
@@ -109,7 +126,7 @@ function App() {
           <h1>INNOVATIONS</h1>
         </div>
       </div>
-      <div className="wrapper-third">
+      <div id="about" className="wrapper-third">
         <div className="third-section">
           <Zoom>
             {" "}
@@ -124,7 +141,7 @@ function App() {
           </h2>
           <h2>All with one thing in common,</h2>
           <h2>
-            We all chose the {text3} <Cursor /> pill,
+            We all chose the RED {text3} <Cursor />,
           </h2>
           <h2>
             And followed web3 Down the rabbit hole to see exactly how far this
@@ -133,7 +150,7 @@ function App() {
           <h2>Needless to say,,, we’re still going,,</h2>
         </div>
       </div>
-      <div className="wrapper-fourth">
+      <div id="proj" className="wrapper-fourth">
         <div className="fourth-section">
           <Zoom top cascade duration={2000}>
             <h1>NFT PROJECTS</h1>
@@ -173,7 +190,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="fifth-section">
+      <div id="sol" className="fifth-section">
         <h1>web2 to 3 solutions</h1>
         <h2>
           100% web3 future proof websites using software suites such as react

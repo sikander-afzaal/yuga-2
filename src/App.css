@@ -11,6 +11,7 @@
   isolation: isolate;
   padding-bottom: 30px;
 }
+
 .wrapper:before,
 .wrapper-third::before,
 .wrapper-fourth::before {
@@ -27,14 +28,34 @@
 .first-section {
   position: relative;
 }
+.wrapperNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-inline: 20px;
+  max-width: 1000px;
+  width: 100%;
+  height: 90px;
+}
+.nav-link {
+  color: white;
+}
 .social-div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  position: absolute;
-  top: 20px;
-  right: 40px;
 }
 .social-div a {
   font-size: 30px;
@@ -45,8 +66,7 @@
 .green {
   color: #55c2ca;
 }
-.first-section,
-.second-section {
+.first-section {
   width: 100%;
   height: max(100vh, 800px);
 }
@@ -61,6 +81,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px 20px;
   padding-inline: 20px;
 }
 .second-section h1 {
@@ -192,10 +216,27 @@ footer p {
   font-size: 30px;
   color: #bbed2f;
 }
-
-@media screen and (max-width: 1241px) {
+.third-section h1 {
+  color: #6d2de7;
+}
+.fourth-section h1 {
+  color: #55c2ca;
+}
+.fifth-section h1 {
+  color: #bbed2f;
+}
+@media screen and (max-width: 1600px) {
   .second-section h1 {
     font-size: 50px;
+  }
+  .fourth-section {
+    height: auto;
+    padding: 100px 20px;
+  }
+}
+@media screen and (max-width: 1241px) {
+  .second-section h1 {
+    font-size: 40px;
   }
   .fourth-section {
     height: auto;
@@ -216,53 +257,67 @@ footer p {
   .second-section h1 {
     font-size: 35px;
   }
+  .third-section h1,
+  .fourth-section h1,
+  .fifth-section h1 {
+    font-size: 40px;
+  }
   .second-section {
-    height: auto;
     padding: 50px 0px;
+    min-height: initial;
   }
   .wrapper {
     background-position: -100%;
+  }
+  .third-section h2,
+  .fourth-section h2,
+  .fifth-section h2 {
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 700px) {
   .third-section h2,
   .fourth-section h2,
   .fifth-section h2 {
-    font-size: 25px;
+    font-size: 16px;
+  }
+  .third-section h1,
+  .fourth-section h1,
+  .fifth-section h1 {
+    font-size: 30px;
+    margin-bottom: 0px;
   }
   .text {
     gap: 30px;
     margin-top: 0px;
   }
   .third-section {
-    height: auto;
+    height: 800px;
     padding: 80px 20px;
   }
-  .third-section h1,
-  .fourth-section h1,
-  .fifth-section h1 {
-    font-size: 50px;
-    margin-bottom: 0px;
+  .nav-link {
+    display: none;
   }
 }
 @media screen and (max-width: 560px) {
   .second-section h1 {
     font-size: 27px;
+    padding-inline: 3px;
   }
   .first-section img {
     margin-left: -15px;
   }
+  footer {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 435px) {
   .second-section h1 {
-    font-size: 22px;
-  }
-  .third-section h2 {
     font-size: 20px;
   }
   .third-section h1,
   .fourth-section h1,
   .fifth-section h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
