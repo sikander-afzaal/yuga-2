@@ -8,6 +8,9 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import footGif from "./Assets/foot.gif";
+import brands1 from "./Assets/brands (1).png";
+import brands2 from "./Assets/brands (2).png";
+import brands3 from "./Assets/brands (3).png";
 import Fade from "react-reveal/Fade";
 import { Zoom } from "react-reveal";
 import { useLayoutEffect, useState } from "react";
@@ -144,7 +147,7 @@ function App() {
           </h2>
           <h2>lye,, our team of degen geniuses</h2>
           <h2>
-            Made up of developers , {text2} <Cursor />
+            Made up of developers , {text2} <Cursor /> and web3 enthusiasts
           </h2>
           <h2>All with one thing in common,</h2>
           <h2>
@@ -152,7 +155,7 @@ function App() {
           </h2>
           <h2>
             And followed web3 Down the rabbit hole to see exactly how far this
-            shit goes
+            tech goes
           </h2>
           <h2>Needless to say,,, we’re still going,,</h2>
         </div>
@@ -161,10 +164,11 @@ function App() {
         <div className="fourth-section">
           <Zoom top cascade duration={2000}>
             <h1>NFT PROJECTS</h1>
-            <h1 className="purple">Project Features</h1>
           </Zoom>
 
           <div className="text">
+            {" "}
+            <h2 className="purple">Project Features:</h2>
             <h2>
               Logo Creation a bespoke created logo, hand drawn , original art
               Sales website, roadmap + more Story, themed background to match
@@ -205,8 +209,9 @@ function App() {
           experience and a level of professionalism to your project…
         </h2>
         <h2>
-          <span className="purple">NO </span> Wordpress,,,
-          <span className="purple">NO </span> webflow,,,
+          <span className="purple">NO </span> Wordpress{" "}
+        </h2>
+        <h2>
           <span className="purple">NO </span> compromises
         </h2>
         <h2>Full stack in house specialist team</h2>
@@ -234,25 +239,38 @@ function App() {
         </h2>
       </div>
       <footer>
-        <Fade>
-          <h3>Get in Touch</h3>
-          <img src={footGif} alt="" />
-          <p>Follow us on social media</p>
-          <div className="foot-social">
-            <a href="#">
-              <FontAwesomeIcon icon={faFacebook} />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
+        <div className="partners">
+          <h1>Our Partners</h1>
+        </div>
+        <div className="foot-center">
+          <Fade>
+            <h3>Get in Touch</h3>
+            <img src={footGif} alt="" />
+            <p>Follow us on social media</p>
+            <div className="foot-social">
+              <a href="#">
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a href="#">
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+              <a href="#">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a href="#">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+            </div>
+          </Fade>
+        </div>
+        <div className="as-seen">
+          <h1>As Seen On</h1>
+          <div className="image-row">
+            <img src={brands1} alt="" />
+            <img src={brands2} alt="" />
+            <img src={brands3} alt="" />
           </div>
-        </Fade>
+        </div>
       </footer>
     </div>
   );

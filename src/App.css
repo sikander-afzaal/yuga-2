@@ -95,7 +95,6 @@
   transform-style: preserve-3d;
 }
 
-.third-section,
 .fourth-section,
 .fifth-section {
   display: flex;
@@ -130,6 +129,14 @@
   align-items: flex-start;
   width: 100%;
   max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 45px;
+  text-align: center;
+  height: auto;
+  padding: 100px 20px;
 }
 .fourth-section {
   width: 100%;
@@ -164,7 +171,8 @@
 .fourth-section h2,
 .fifth-section h2 {
   color: white;
-  font-size: 40px;
+  font-size: 33px;
+  line-height: 1.4;
   text-align: left;
 }
 
@@ -187,19 +195,58 @@
 footer {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  gap: 140px;
+  width: 100%;
+  padding: 100px 20px;
+}
+.foot-center {
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  width: 100%;
-  padding: 100px 20px;
+}
+.partners {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.as-seen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.as-seen h1,
+.partners h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.image-row img {
+  width: 151px;
+  object-fit: contain;
 }
 footer h3 {
   color: #c69f11;
   font-size: 55px;
   font-weight: normal;
+  text-align: center;
 }
 footer p {
   color: white;
+  text-align: center;
   font-size: 25px;
 }
 .foot-social {
@@ -210,7 +257,7 @@ footer p {
 }
 .foot-social a {
   font-size: 30px;
-  color: #bbed2f;
+  color: #6d2de7;
 }
 .third-section h1 {
   color: #6d2de7;
@@ -243,6 +290,11 @@ footer p {
   .fourth-section {
     height: auto;
     padding: 100px 20px;
+  }
+  footer {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
 }
 @media screen and (max-width: 960px) {
