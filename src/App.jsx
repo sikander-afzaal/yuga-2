@@ -116,6 +116,8 @@ function App() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="bar-wrap">
         <FontAwesomeIcon
           onClick={() => setOpen((prev) => !prev)}
           icon={open ? faXmark : faBars}
@@ -143,15 +145,18 @@ function App() {
             <h1 style={{ alignSelf: "center" }}>About Us</h1>
           </Zoom>
           <h2>
-            in the deepest corner of the {text1} <Cursor />
+            in the deepest corner of the <span className="purple">{text1}</span>{" "}
+            <Cursor />
           </h2>
           <h2>lye,, our team of degen geniuses</h2>
           <h2>
-            Made up of developers , {text2} <Cursor /> and web3 enthusiasts
+            Made up of developers , <span className="purple">{text2}</span>{" "}
+            <Cursor /> and web3 enthusiasts
           </h2>
           <h2>All with one thing in common,</h2>
           <h2>
-            We all chose to take the RED {text3} <Cursor />,
+            We all chose to take the RED <span className="purple">{text3}</span>{" "}
+            <Cursor />,
           </h2>
           <h2>
             And followed web3 Down the rabbit hole to see exactly how far this

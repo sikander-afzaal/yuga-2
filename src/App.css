@@ -265,18 +265,20 @@ footer p {
 .fourth-section h1 {
   color: #55c2ca;
 }
-
+.third-section {
+  gap: 20px;
+}
+.third-section h2 {
+  height: 100px;
+}
 .bars {
   display: none;
   font-size: 25px;
   color: white;
-  position: fixed;
-  top: 30px;
-  right: 30px;
 }
 @media screen and (max-width: 1600px) {
   .second-section h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .fourth-section {
     height: auto;
@@ -349,6 +351,19 @@ footer p {
     height: 800px;
     padding: 80px 20px;
   }
+  .bar-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding-right: 20px;
+    z-index: 30;
+  }
   .bars {
     display: block;
   }
@@ -360,12 +375,14 @@ footer p {
     width: 100%;
     top: 0;
     transition: all 0.4s ease-in-out;
+    z-index: 29;
   }
   .navbar {
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 30px;
-
+    height: 100%;
+    padding: 120px 0px;
     flex-direction: column;
   }
   .open {
@@ -387,6 +404,9 @@ footer p {
 @media screen and (max-width: 435px) {
   .second-section h1 {
     font-size: 20px;
+  }
+  .wrapperNav {
+    max-width: 100%;
   }
   .third-section h1,
   .fourth-section h1,
